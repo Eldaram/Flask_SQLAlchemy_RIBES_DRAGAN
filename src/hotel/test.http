@@ -1,0 +1,55 @@
+
+POST http://localhost:5000/api/chambres
+Content-Type: application/json
+
+{
+  "numero": "104",
+  "type": "Deluxe",
+  "prix": 150
+}
+
+POST http://localhost:5000/api/clients
+Content-Type: application/json
+
+{
+  "nom": "dragan",
+  "email": "dragan.ribekjh"
+}
+
+POST http://localhost:5000/api/reservations
+Content-Type: application/json
+
+{
+  "id_client": 1,
+  "id_chambre": 1,
+  "date_arrivee": "01-08-2001",
+  "date_depart": "01-14-2001"
+
+}
+
+GET http://localhost:5000/api/chambres
+
+PUT http://localhost:5000/api/chambres/1
+Content-Type: application/json
+
+{
+  "numero": "133",
+  "type": "VOITURE",
+  "prix": 200
+}
+
+DELETE http://localhost:5000/api/chambres/2
+
+GET http://localhost:5000/api/clients
+
+GET http://localhost:5000/api/reservations
+
+GET http://localhost:5000/api/chambres/disponibles
+Content-Type: application/json
+
+{
+  "date_arrivee": "01-03-2001",
+  "date_depart": "01-06-2001"
+}
+
+DELETE http://localhost:5000/api/reservations/2
